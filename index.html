@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>[ N3wFlow3R Project ]</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- libs imports -->
+    <script src="libs/p5.js" ></script>
+    <script src="libs/p5.sound.min.js" ></script>
+
+    <!-- our imports -->
+    <script src="src/genetics/ColorMixer/GeneticColorProcessor.js"></script>
+    <script src="src/genetics/ColorMixer/IndividualColor.js"></script>
+    <script src="src/genetics/ColorMixer/DistributionTable.js"></script>
+    
+    <script src="src/genetics/ShapeDrawer/ShapeGenerator.js"></script>
+    <script src="src/genetics/ShapeDrawer/IndividualShape.js"></script>
+
+    <script src="src/genetics/StemBuilder/StemGenerator.js"></script>
+    <script src="src/genetics/StemBuilder/IndividualStem.js"></script>
+
+    <script src="src/genetics/PistilGenerator/PistilGenerator.js"></script>
+    <script src="src/genetics/PistilGenerator/IndividualPistil.js"></script>
+
+    <script src="src/genetics/Utils.js"></script>
+
+    <script src="src/flower/Flower.js"></script>
+    <script src="src/flower/FlowerGenerator.js"></script>
+
+    <script src="src/image/ImageSchema.js"></script>
+    <script src="src/image/ImageHandler.js"></script>
+    <script src="src/image/ImageAnalyzer.js"></script>
+    <script src="src/image/ImageUtils.js"></script>
+
+    <script src="src/utils/InputHandler.js"></script>
+    <script src="src/utils/LoopHandler.js"></script>
+    <script src="src/utils/Constants.js"></script>
+
+    <!-- draw loop and initial setup -->
+    <script src="Main.js"></script>
+
+</head>
+<body >
+
+    <header>
+        <div class="container">
+        <h1 style="font-family: 'Lucida Console', Courier, monospace;">New Flower </h1>
+        </div>
+    </header>
+
+
+    <!-- ui components -->
+    <div id='inputZone' >
+        <form id="id_buttonPanel">
+        <input type="button" value="NEXT!" onclick="guiHandler.nextImage()" name="nextImageButton" id="nib1">
+
+        <input type="button" value="Next input!" onclick="guiHandler.inputHandler.nextInput()" name="nextInputBotton" id="inputBtn">
+
+        <input type="button" value="Save Data (.json)" onclick="guiHandler.inputHandler.saveData()" name="saveData" id="saveDataButton">
+    </div>
+
+</form>
+</body>
+</html>

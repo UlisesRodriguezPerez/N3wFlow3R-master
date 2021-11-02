@@ -1,0 +1,73 @@
+[ Algoritmos “Greedy” ]
+
+• Dijkstra, Kruskal, MST son algoritmos voraces (greedy algorithm).
+• Funcionan en fases.
+• En cada fase se toma una decisión que parece buena; sin considerar las consecuencias futuras.
+• Eso se le llama óptimo local.
+• Sigue la estrategia de “se toma lo que se pueda ahora”.
+• Se busca que el óptimo local sea el óptimo global.
+• Un algoritmo voraz no todo el tiempo obtiene la respuesta óptima
+• Un ejemplo es el cambio de monedas; el cual se hace por etapas buscando la mayor denominación
+posible.
+• La mayoría de los algoritmos ávidos son NP Completos.
+• Problemas de planificación
+
+• Los siguientes son los factores a tomar en cuenta para un algoritmo voraz:
+• un conjunto o lista de candidatos (tareas a procesar, vértices del grafo, etc);
+• un conjunto de decisiones ya tomadas (candidatos ya escogidos);
+• una función que determina si un conjunto de candidatos es una solución al problema (aunque
+no tiene por qué ser la óptima);
+• una función que determina si un conjunto es completable, es decir, si añadiendo a este conjunto
+nuevos candidatos es posible alcanzar una solución al problema, suponiendo que esta exista;
+• una función de selección que escoge el candidato aún no seleccionado que es más prometedor;
+• una función objetivo que da el valor/costo de una solución (tiempo total del proceso, la longitud
+del camino, etc) y que es la que se pretende maximizar o minimizar
+
+Pasos para diseñar un algoritmo Voraz con efectividad
+• Determine la subestructura óptima del problema, por ejemplo, por ordenamiento, árbol, listas,
+pilas, agrupamientos
+• Demuestre que, al realizar una selección voraz de una opción, solo queda un subproblema a resolver
+• Demuestre que es seguro hacer una selección voraz
+• Escriba una solución recursiva del algoritmo
+• Transforme la recursión a iterativo
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ Algoritmos genéticos ]
+
+• Su fundamento viene de las ideas de Charles Darwin plasmadas desde 1859 en su obra “El Origen de
+las Especies”
+• Entre 1950 y 1960 se concibe la idea de que la evolución podría ser usada como una herramienta de
+la optimización de problemas de ingeniería.
+• Inventado por John Holland y sus estudiantes y colegas de la universidad de Michigan en 1960.
+• Los GA trata de mover una población de cromosomas a una nueva población utilizando operadores
+genéticos de selección natural como:
+o Cruce: combinar material genético entre dos cromosomas padres.
+o Mutación: complemento de bits de forma aleatoria en un punto.
+o Inversión: reordenar el orden en que los genes son dispuestos.
+• Los GA tienen estos elementos en común:
+o Población de cromosomas.
+o Selección de acuerdo a la adaptabilidad.
+o Reproducción para producir nuevos descendientes.
+o Mutación aleatoria de un nuevo descendiente.
+• Los pasos que sigue un GA para la búsqueda de soluciones son:
+o Genera un conjunto de soluciones candidatas iniciales.
+o Evaluar las soluciones candidatas de acuerdo a algún criterio de adaptabilidad.
+o Decidir cuales candidatos se quedaran y cuantos se descartan.
+o Finalmente, producir las variantes usando alguno de los operadores de supervivencia.
+Cómo trabajan los algoritmos genéticos?
+• Los genotipos serán representados como una dimensión en (l+1) “Vector”.
+• Cada genotipo es un punto en la dimensión l.
+1. Inicie con una población generada aleatoriamente de n l-bits cromosomas (candidato a
+solución).
+2. Calcule la adaptabilidad f(x) de cada cromosoma x en la población.
+3. Repita estos pasos hasta que se creen n descendientes.
+a. Seleccionar un par de cromosomas de la población actual, la probabilidad de
+selección hará un incremento en la función de adaptabilidad f(x).
+b. Con probabilidad pc el cruce aleatoriamente escoge un punto para formar dos
+descendientes.
+c. Mutar dos descendientes de cada “capullo” con probabilidad pm y ponga los
+cromosomas resultantes en la nueva población.
+d. Si n es par, un nuevo miembro de la población será descartado al azar.(Opcional)
+4. Reemplace la población actual con una nueva población.
+5. Vaya al punto 2.
